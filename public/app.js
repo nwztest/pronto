@@ -149,7 +149,7 @@ function renderSignIn() {
   return `
     <main class="login">
       <section class="login-card">
-        <div class="mark">S</div>
+        <div class="mark">P</div>
         <div>
           <div class="brand">PRONTO</div>
           <div class="mono tiny muted">PUBLIC SENTIMENT INTEL</div>
@@ -298,7 +298,7 @@ function renderRail() {
   ];
   return `
     <aside class="rail">
-      <div class="logo">S</div>
+      <div class="logo">P</div>
       ${entries.map(([route, icon, title]) => `
         <button class="${state.route === route ? "active" : ""}" data-route="${route}" title="${title}">
           <span class="rail-icon" aria-hidden="true">${icon}</span>
