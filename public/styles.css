@@ -365,11 +365,13 @@ textarea {
 .choice {
   border: 1px solid var(--line);
   background: var(--surface-3);
+  color: var(--text);
   border-radius: 5px;
   padding: 14px;
   min-height: 96px;
   display: grid;
   gap: 8px;
+  text-align: left;
 }
 
 .choice.selected,
@@ -381,10 +383,18 @@ textarea {
 .source-pack {
   border: 1px solid var(--line);
   background: var(--surface-3);
+  color: var(--text);
   border-radius: 5px;
   padding: 13px;
   display: grid;
   gap: 8px;
+}
+
+.choice strong,
+.choice .muted,
+.source-pack strong,
+.source-pack .muted {
+  color: inherit;
 }
 
 .setup-actions {
