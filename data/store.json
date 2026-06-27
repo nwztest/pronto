@@ -10,6 +10,38 @@
   },
   "monitors": [
     {
+      "id": "monitor-jomm3nt-mqw2p4b1",
+      "subject": "Kimi Antonelli",
+      "subjectType": "person",
+      "description": "Kimi Antonelli is an F1 driver for Mercedes",
+      "keywords": [
+        "kimi",
+        "antonelli",
+        "toto",
+        "bono",
+        "f1",
+        "mercedes"
+      ],
+      "aliases": [
+        "Kimi"
+      ],
+      "excludedKeywords": [],
+      "intent": "Executive/person reputation",
+      "region": "Global",
+      "scanSettings": {
+        "recentCount": 20,
+        "topCount": 20,
+        "frequency": "manual"
+      },
+      "sourceIds": [
+        "src-13rs2lf-mqw2pmzk",
+        "src-sx8fndn-mqw2rgy3",
+        "src-svetqlk-mqw2sht6"
+      ],
+      "latestRunId": "run-y56zpr8-mqw2pr9m",
+      "createdAt": "2026-06-27T08:03:19.694Z"
+    },
+    {
       "id": "monitor-eapf5qm-mqw0by3g",
       "subject": "OpenAI",
       "subjectType": "company",
@@ -153,13 +185,88 @@
         "src-rss-1",
         "src-youtube-1",
         "src-reddit-1",
-        "src-x-1"
+        "src-x-1",
+        "src-jr1x0it-mqw2nstw",
+        "src-a5cts65-mqw2nxca",
+        "src-xmixuir-mqw2tmf4"
       ],
-      "latestRunId": "run-kael6ld-mqw154bn",
+      "latestRunId": "run-vvvwuc0-mqw2o9c8",
       "createdAt": "2026-06-27T06:01:20.892Z"
     }
   ],
   "sources": [
+    {
+      "id": "src-xmixuir-mqw2tmf4",
+      "monitorId": "monitor-openai",
+      "type": "rss",
+      "name": "Google News RSS",
+      "url": "https://news.google.com/rss/search?q=OpenAI",
+      "status": "active",
+      "lastFetchedAt": "2026-06-27T08:06:49.792Z",
+      "itemCount": 102,
+      "health": "validated",
+      "error": ""
+    },
+    {
+      "id": "src-svetqlk-mqw2sht6",
+      "monitorId": "monitor-jomm3nt-mqw2p4b1",
+      "type": "rss",
+      "name": "Google News RSS",
+      "url": "https://news.google.com/rss/search?q=Kimi%20Antonelli",
+      "status": "active",
+      "lastFetchedAt": "2026-06-27T08:05:57.162Z",
+      "itemCount": 92,
+      "health": "validated",
+      "error": ""
+    },
+    {
+      "id": "src-sx8fndn-mqw2rgy3",
+      "monitorId": "monitor-jomm3nt-mqw2p4b1",
+      "type": "rss",
+      "name": "Google News RSS",
+      "url": "https://news.google.com/rss/search?q=OpenAI",
+      "status": "active",
+      "lastFetchedAt": "2026-06-27T08:05:09.387Z",
+      "itemCount": 102,
+      "health": "validated",
+      "error": ""
+    },
+    {
+      "id": "src-13rs2lf-mqw2pmzk",
+      "monitorId": "monitor-jomm3nt-mqw2p4b1",
+      "type": "rss",
+      "name": "News Google OpenAI",
+      "url": "https://news.google.com/rss/search?q=OpenAI",
+      "status": "active",
+      "lastFetchedAt": "2026-06-27T08:03:49.552Z",
+      "itemCount": 3,
+      "health": "real-time",
+      "error": ""
+    },
+    {
+      "id": "src-a5cts65-mqw2nxca",
+      "monitorId": "monitor-openai",
+      "type": "rss",
+      "name": "Google News RSS",
+      "url": "https://news.google.com/rss/search?q=OpenAI",
+      "status": "active",
+      "lastFetchedAt": "2026-06-27T08:02:39.616Z",
+      "itemCount": 20,
+      "health": "real-time",
+      "error": ""
+    },
+    {
+      "id": "src-jr1x0it-mqw2nstw",
+      "monitorId": "monitor-openai",
+      "type": "reddit",
+      "name": "Reddit search query",
+      "url": "reddit:OpenAI",
+      "status": "planned",
+      "lastFetchedAt": "2026-06-27T08:02:39.616Z",
+      "itemCount": 2,
+      "health": "planned",
+      "error": ""
+    },
     {
       "id": "src-a839n5c-mqvzpz04",
       "monitorId": "monitor-wj7yu0d-mqvzp40q",
@@ -239,7 +346,7 @@
       "name": "OpenAI News RSS",
       "url": "https://news.google.com/rss/search?q=OpenAI+OR+ChatGPT&hl=en-US&gl=US&ceid=US:en",
       "status": "active",
-      "lastFetchedAt": "2026-06-27T07:19:47.603Z",
+      "lastFetchedAt": "2026-06-27T08:02:39.633Z",
       "itemCount": 18,
       "health": "real-time",
       "error": ""
@@ -251,7 +358,7 @@
       "name": "YouTube Search: enterprise AI",
       "url": "youtube:openai enterprise ai",
       "status": "mocked",
-      "lastFetchedAt": "2026-06-27T07:19:47.603Z",
+      "lastFetchedAt": "2026-06-27T08:02:39.633Z",
       "itemCount": 2,
       "health": "simulated",
       "error": "YouTube API key not configured"
@@ -263,7 +370,7 @@
       "name": "Reddit: r/startups",
       "url": "reddit:r/startups OpenAI",
       "status": "planned",
-      "lastFetchedAt": "2026-06-27T07:19:47.603Z",
+      "lastFetchedAt": "2026-06-27T08:02:39.633Z",
       "itemCount": 2,
       "health": "planned",
       "error": ""
@@ -275,7 +382,7 @@
       "name": "X Search: OpenAI enterprise",
       "url": "x:OpenAI enterprise AI",
       "status": "planned",
-      "lastFetchedAt": "2026-06-27T07:19:47.603Z",
+      "lastFetchedAt": "2026-06-27T08:02:39.633Z",
       "itemCount": 1,
       "health": "planned",
       "error": ""
@@ -283,7 +390,405 @@
   ],
   "items": [
     {
-      "id": "item-sapkbp9-mqw154sv",
+      "id": "item-if9pm1s-mqw2prce",
+      "sourceId": "src-13rs2lf-mqw2pmzk",
+      "sourceType": "rss",
+      "title": "OpenAI and Anthropic face new AI reality as users shift from 'tokenmaxxing' to efficiency - CNBC",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMF8taEF1Z1U2WElGXzIwUWt0LXpIUVNQSWhGblA4c1NGdmZDNjRqc2tnZ0pLYlYyMzdhVkplOG83b1FpRkFHRkJKMDR6WmtQQkoxVVRFc0hJRV84WGUwUjNFNFhYNk81aWR4MUpyNkdFcFRIbk9TSU0zNjJtaGZQdFowVW9IaGdlMG5vc0tIUTVaOVdEUkVvMi1aQXBiSEpSQ2xWQmRZVnpYdw?oc=5\" target=\"_blank\">OpenAI and Anthropic face new AI reality as users shift from 'tokenmaxxing' to efficiency</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMF8taEF1Z1U2WElGXzIwUWt0LXpIUVNQSWhGblA4c1NGdmZDNjRqc2tnZ0pLYlYyMzdhVkplOG83b1FpRkFHRkJKMDR6WmtQQkoxVVRFc0hJRV84WGUwUjNFNFhYNk81aWR4MUpyNkdFcFRIbk9TSU0zNjJtaGZQdFowVW9IaGdlMG5vc0tIUTVaOVdEUkVvMi1aQXBiSEpSQ2xWQmRZVnpYdw?oc=5",
+      "publishedAt": "2026-06-26T12:00:01.000Z",
+      "engagement": {
+        "score": 60,
+        "comments": 0
+      },
+      "relevanceScore": 30,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-5jug6rp-mqw2prce",
+      "sourceId": "src-13rs2lf-mqw2pmzk",
+      "sourceType": "rss",
+      "title": "OpenAI staggers AI model release after Trump administration request - The Guardian",
+      "text": "<ol><li><a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHpsR0FaODVIVE4zSnJ6NUpxYzNLbmFwQWJscnh6bEZlS1BUSE1TOGxEd3B1WlhpUWk2bVZkejJWejVqSG5WNUhSR3NKS2tCQTRxX2MwSTloaXNHeTVwZmFJeFZkWG1MX2dtTW92VlhVclZXZ3JhcUZ4TnB1Wl85VzZkcTRwYWxtanZ0UkhuejYtNTJmVkk0WEo3S1pHMkVFOS1qcnR5RVU0QlVZQkJUUHNoc3lNdw?oc=5\" target=\"_blank\">OpenAI staggers AI model release after Trump administration request</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font></li><li><a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPeXc2OG91ajlMZGxyMk1kSk43SmRsTFFUU0RQRngtRGxlN3NDbWZyUXJJNzcxRnJpR1V4WUREOFRXZXFPencyOW50b1U3Wk5GNy1lNzhQRWI3cjBnaDJXTGNZS04xTUt2Z2lCWFlrSFNtRGQzd1R0a0J2X1JlRmxZdXJBWVZ1TzR6aVk3ZWVMTlFCY0F1S2VOVUFoS2dXZjBrR0I2TVplcFpXUE5jaVppMU1faFA?oc=5\" target=\"_blank\">The U.S. government will decide who gets to use the latest American AI technology</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font></li><li><a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxNWldpbTlwYnlPY0ZtYzNSeWtZZEQ1bERqWVBRT2JSVmtqUmV6M0JEeVE3ZTNwODZIZTZZM3U1ek90OC1hZHJCUmhfbXZEMk1HN1FqUDRtRHpmU21FQ2o5ckVvOWVEclpkdzFHWi1DRkNLMzlxS25BdTNhUHE3b0FMNTg3eEd1OVktVVNoY2E3emJGb09sb21yOU9sMzVTRlpFZDIwLUZCX203VHc0cV9xNWxhbDFPdVFrZ1NXdkVKTFo1RlpzU2ljTERKaTBLZHpBa1A0TnFtNE96Y29yM2lz?oc=5\" target=\"_blank\">OpenAI defers public rollout of GPT‑5.6 as US seeks early access to frontier AI models</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Business Times</font></li></ol>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHpsR0FaODVIVE4zSnJ6NUpxYzNLbmFwQWJscnh6bEZlS1BUSE1TOGxEd3B1WlhpUWk2bVZkejJWejVqSG5WNUhSR3NKS2tCQTRxX2MwSTloaXNHeTVwZmFJeFZkWG1MX2dtTW92VlhVclZXZ3JhcUZ4TnB1Wl85VzZkcTRwYWxtanZ0UkhuejYtNTJmVkk0WEo3S1pHMkVFOS1qcnR5RVU0QlVZQkJUUHNoc3lNdw?oc=5",
+      "publishedAt": "2026-06-26T14:06:00.000Z",
+      "engagement": {
+        "score": 59,
+        "comments": 0
+      },
+      "relevanceScore": 30,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-bhian4n-mqw2prcf",
+      "sourceId": "src-13rs2lf-mqw2pmzk",
+      "sourceType": "rss",
+      "title": "ChatGPT owner OpenAI may delay IPO until 2027 on tech stock volatility, NYT reports - The Straits Times",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxNbHdQM3lndkh1anl2ZXdfVmZRbjRDTjE3VWtKTUhuZ3V4UjI5cEVoVzhkVTRSZ1l4d3dvbEJyN3pJdmRSN0czZlRqcFQ3a1NBc0poaV84bkNMVE12bTlHcDIxekFpQ2taV2lmQTI5dzQ1a3ROWWM4TEs2cWdIVnRmSmpwSW5LVmxvYWFxckZIa1BET0txVWw4YnJ3dFl6dUFPcWVQMEpNTWFyQ2FUVlV6RkE3Y1F1SzhCbmV0QW1uQS1NTkZHYkY2T1IzVkJDOTBRbnRrVjBrb0s2c3hsancyeGNDRQ?oc=5\" target=\"_blank\">ChatGPT owner OpenAI may delay IPO until 2027 on tech stock volatility, NYT reports</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Straits Times</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNbHdQM3lndkh1anl2ZXdfVmZRbjRDTjE3VWtKTUhuZ3V4UjI5cEVoVzhkVTRSZ1l4d3dvbEJyN3pJdmRSN0czZlRqcFQ3a1NBc0poaV84bkNMVE12bTlHcDIxekFpQ2taV2lmQTI5dzQ1a3ROWWM4TEs2cWdIVnRmSmpwSW5LVmxvYWFxckZIa1BET0txVWw4YnJ3dFl6dUFPcWVQMEpNTWFyQ2FUVlV6RkE3Y1F1SzhCbmV0QW1uQS1NTkZHYkY2T1IzVkJDOTBRbnRrVjBrb0s2c3hsancyeGNDRQ?oc=5",
+      "publishedAt": "2026-06-26T02:21:31.000Z",
+      "engagement": {
+        "score": 48,
+        "comments": 0
+      },
+      "relevanceScore": 30,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-4dezmo6-mqw2o9dq",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI and Anthropic face new AI reality as users shift from 'tokenmaxxing' to efficiency - CNBC",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMF8taEF1Z1U2WElGXzIwUWt0LXpIUVNQSWhGblA4c1NGdmZDNjRqc2tnZ0pLYlYyMzdhVkplOG83b1FpRkFHRkJKMDR6WmtQQkoxVVRFc0hJRV84WGUwUjNFNFhYNk81aWR4MUpyNkdFcFRIbk9TSU0zNjJtaGZQdFowVW9IaGdlMG5vc0tIUTVaOVdEUkVvMi1aQXBiSEpSQ2xWQmRZVnpYdw?oc=5\" target=\"_blank\">OpenAI and Anthropic face new AI reality as users shift from 'tokenmaxxing' to efficiency</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQMF8taEF1Z1U2WElGXzIwUWt0LXpIUVNQSWhGblA4c1NGdmZDNjRqc2tnZ0pLYlYyMzdhVkplOG83b1FpRkFHRkJKMDR6WmtQQkoxVVRFc0hJRV84WGUwUjNFNFhYNk81aWR4MUpyNkdFcFRIbk9TSU0zNjJtaGZQdFowVW9IaGdlMG5vc0tIUTVaOVdEUkVvMi1aQXBiSEpSQ2xWQmRZVnpYdw?oc=5",
+      "publishedAt": "2026-06-26T12:00:01.000Z",
+      "engagement": {
+        "score": 98,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-p8402n5-mqw2o9dq",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI staggers AI model release after Trump administration request - The Guardian",
+      "text": "<ol><li><a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHpsR0FaODVIVE4zSnJ6NUpxYzNLbmFwQWJscnh6bEZlS1BUSE1TOGxEd3B1WlhpUWk2bVZkejJWejVqSG5WNUhSR3NKS2tCQTRxX2MwSTloaXNHeTVwZmFJeFZkWG1MX2dtTW92VlhVclZXZ3JhcUZ4TnB1Wl85VzZkcTRwYWxtanZ0UkhuejYtNTJmVkk0WEo3S1pHMkVFOS1qcnR5RVU0QlVZQkJUUHNoc3lNdw?oc=5\" target=\"_blank\">OpenAI staggers AI model release after Trump administration request</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font></li><li><a href=\"https://news.google.com/rss/articles/CBMitAFBVV95cUxPeXc2OG91ajlMZGxyMk1kSk43SmRsTFFUU0RQRngtRGxlN3NDbWZyUXJJNzcxRnJpR1V4WUREOFRXZXFPencyOW50b1U3Wk5GNy1lNzhQRWI3cjBnaDJXTGNZS04xTUt2Z2lCWFlrSFNtRGQzd1R0a0J2X1JlRmxZdXJBWVZ1TzR6aVk3ZWVMTlFCY0F1S2VOVUFoS2dXZjBrR0I2TVplcFpXUE5jaVppMU1faFA?oc=5\" target=\"_blank\">The U.S. government will decide who gets to use the latest American AI technology</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font></li><li><a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxNWldpbTlwYnlPY0ZtYzNSeWtZZEQ1bERqWVBRT2JSVmtqUmV6M0JEeVE3ZTNwODZIZTZZM3U1ek90OC1hZHJCUmhfbXZEMk1HN1FqUDRtRHpmU21FQ2o5ckVvOWVEclpkdzFHWi1DRkNLMzlxS25BdTNhUHE3b0FMNTg3eEd1OVktVVNoY2E3emJGb09sb21yOU9sMzVTRlpFZDIwLUZCX203VHc0cV9xNWxhbDFPdVFrZ1NXdkVKTFo1RlpzU2ljTERKaTBLZHpBa1A0TnFtNE96Y29yM2lz?oc=5\" target=\"_blank\">OpenAI defers public rollout of GPT‑5.6 as US seeks early access to frontier AI models</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Business Times</font></li></ol>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHpsR0FaODVIVE4zSnJ6NUpxYzNLbmFwQWJscnh6bEZlS1BUSE1TOGxEd3B1WlhpUWk2bVZkejJWejVqSG5WNUhSR3NKS2tCQTRxX2MwSTloaXNHeTVwZmFJeFZkWG1MX2dtTW92VlhVclZXZ3JhcUZ4TnB1Wl85VzZkcTRwYWxtanZ0UkhuejYtNTJmVkk0WEo3S1pHMkVFOS1qcnR5RVU0QlVZQkJUUHNoc3lNdw?oc=5",
+      "publishedAt": "2026-06-26T14:06:00.000Z",
+      "engagement": {
+        "score": 97,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-eulrsuu-mqw2o9dq",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI hasn't held pre-IPO investor meetings or set timeline yet, sources say - CNBC",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE13OU9kQU9NcWpDYTV6Y3d1blJXa1ZiZkFxM1ZSUUlONi1taHNJLUxlMWpkNXJpd1AySUxxaHlIeklTNXllZHh3U1hSNHpFRGdCMFVLclVKTUVjbG9henhDX0pvZEdiMTVXbG1OSVU4TWFCVGZtWUHSAXtBVV95cUxQeTgwMGllYVY0ekdDYTJwdWQtRkVIOUs1MjVndGhtUnVpUUE5V1YweVhoc25zU09iemdSUmRuZjZ2NG8yRGd6dDFqWjgydXNTaUpTNjdFS0s1ak50U25Hcl84YnZDOVV6WUR5ckxfRXNhZ195Xzc4a0hib00?oc=5\" target=\"_blank\">OpenAI hasn't held pre-IPO investor meetings or set timeline yet, sources say</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE13OU9kQU9NcWpDYTV6Y3d1blJXa1ZiZkFxM1ZSUUlONi1taHNJLUxlMWpkNXJpd1AySUxxaHlIeklTNXllZHh3U1hSNHpFRGdCMFVLclVKTUVjbG9henhDX0pvZEdiMTVXbG1OSVU4TWFCVGZtWUHSAXtBVV95cUxQeTgwMGllYVY0ekdDYTJwdWQtRkVIOUs1MjVndGhtUnVpUUE5V1YweVhoc25zU09iemdSUmRuZjZ2NG8yRGd6dDFqWjgydXNTaUpTNjdFS0s1ak50U25Hcl84YnZDOVV6WUR5ckxfRXNhZ195Xzc4a0hib00?oc=5",
+      "publishedAt": "2026-06-26T15:32:25.000Z",
+      "engagement": {
+        "score": 96,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-jnvtjiz-mqw2o9dq",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "AI trade hits a wall amid report that OpenAI will delay IPO until 2027 - Yahoo Finance",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMiygFBVV95cUxNQVVNcDhmUlhXZmo4LUFxRldndzdVRlBCajBTS2NwUEwxYzFNbjFZSkpUNWs5aFU2eGs4a2FNSk1ET1pfeXZjVmhybldPTlBsdVY2X3NSM245QkxtLThqZVZaVTRMX3ZQem5Vc3o3c3VsX0czU2J6Z19PRy11cXYxT2h0SkoyNDVSSHo0TGNZUFEtaGZDbjNBSVM3NkM4eHdpT2Q0MzlCM1ExNXhQZmhPenZCU0JJbmZHMWo2OTlkZkhkSGRNVWhCQURB?oc=5\" target=\"_blank\">AI trade hits a wall amid report that OpenAI will delay IPO until 2027</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNQVVNcDhmUlhXZmo4LUFxRldndzdVRlBCajBTS2NwUEwxYzFNbjFZSkpUNWs5aFU2eGs4a2FNSk1ET1pfeXZjVmhybldPTlBsdVY2X3NSM245QkxtLThqZVZaVTRMX3ZQem5Vc3o3c3VsX0czU2J6Z19PRy11cXYxT2h0SkoyNDVSSHo0TGNZUFEtaGZDbjNBSVM3NkM4eHdpT2Q0MzlCM1ExNXhQZmhPenZCU0JJbmZHMWo2OTlkZkhkSGRNVWhCQURB?oc=5",
+      "publishedAt": "2026-06-26T15:06:42.000Z",
+      "engagement": {
+        "score": 95,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-lub7mz8-mqw2o9dq",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI Leans Toward Holding Up I.P.O. Until Next Year - The New York Times",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxOX1h6bTA1cUUtN3ZZdWpZcnNZUG5IS2VsekVLdDBkNWpGQjFXUXJaODl4Q3pweU1mbmFjRmVXZTB1ZURPOVhreWpJZnRoTThaV1dsMXNKYVBSR3h4LWJUSUhjYklrcHhPZDk4Y0d5OU84dGNXTklvRUxZUzNDNV9kZWZCbFF2UmxkLUNtNGtR?oc=5\" target=\"_blank\">OpenAI Leans Toward Holding Up I.P.O. Until Next Year</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The New York Times</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOX1h6bTA1cUUtN3ZZdWpZcnNZUG5IS2VsekVLdDBkNWpGQjFXUXJaODl4Q3pweU1mbmFjRmVXZTB1ZURPOVhreWpJZnRoTThaV1dsMXNKYVBSR3h4LWJUSUhjYklrcHhPZDk4Y0d5OU84dGNXTklvRUxZUzNDNV9kZWZCbFF2UmxkLUNtNGtR?oc=5",
+      "publishedAt": "2026-06-25T20:31:22.000Z",
+      "engagement": {
+        "score": 94,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-hxbbd0u-mqw2o9dq",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "Broadcom & OpenAI Unveil Jalapeno AI Chip: More Upside for AVGO Stock? - Yahoo Finance Singapore",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMUhVTC1Sbl94SUhXMDE5S24wa1NhT3pfbXI4M0JKbzl4VHFfQU5WdWp1NHBzY1hzeVVoYjNWZ1JwV2xSMW1reUVzMmF2SHRRT3QtRGw4WnNCYTVNSUNjckh6ZWVZNjdiWk92STlBZnNKU0EyYS1vU2VKRmZIUmpiY21jS2twUzVEU2dv?oc=5\" target=\"_blank\">Broadcom & OpenAI Unveil Jalapeno AI Chip: More Upside for AVGO Stock?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Yahoo Finance Singapore</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMUhVTC1Sbl94SUhXMDE5S24wa1NhT3pfbXI4M0JKbzl4VHFfQU5WdWp1NHBzY1hzeVVoYjNWZ1JwV2xSMW1reUVzMmF2SHRRT3QtRGw4WnNCYTVNSUNjckh6ZWVZNjdiWk92STlBZnNKU0EyYS1vU2VKRmZIUmpiY21jS2twUzVEU2dv?oc=5",
+      "publishedAt": "2026-06-26T13:43:00.000Z",
+      "engagement": {
+        "score": 93,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-2evgdkw-mqw2o9dq",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "Apple’s Vision Pro and Smart Glasses Chief to Join OpenAI - Bloomberg.com",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQanNmRDl4VjEtcDNPRVFrOHdBWHJuOTlFUXlwcnM2cm9OalcyZnVneXhzanh6NC10ZzJrVkpZQzJpbXFVdmxBNEJqZmdnbWpZaUZCXzRrdnRKUm1IeloxVldiejFXbFR1N3ZnaVh0c2dNeHNra2Q1Tlo1dGxpMFU2SDY2Q2RGQ01SVVljb2lSNjZSZFVfQ2pJU2w2aWIwakpZVlZvSS1NVVgwNFRtcGpzQTg1c1RBdk1rb0NoWUI4eFZncWpT?oc=5\" target=\"_blank\">Apple’s Vision Pro and Smart Glasses Chief to Join OpenAI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQanNmRDl4VjEtcDNPRVFrOHdBWHJuOTlFUXlwcnM2cm9OalcyZnVneXhzanh6NC10ZzJrVkpZQzJpbXFVdmxBNEJqZmdnbWpZaUZCXzRrdnRKUm1IeloxVldiejFXbFR1N3ZnaVh0c2dNeHNra2Q1Tlo1dGxpMFU2SDY2Q2RGQ01SVVljb2lSNjZSZFVfQ2pJU2w2aWIwakpZVlZvSS1NVVgwNFRtcGpzQTg1c1RBdk1rb0NoWUI4eFZncWpT?oc=5",
+      "publishedAt": "2026-06-26T19:31:01.000Z",
+      "engagement": {
+        "score": 92,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-tj5ise1-mqw2o9dq",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "NYT slams Microsoft for building copyright-infringing supercomputer for OpenAI - Ars Technica",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxNZkZOektrZmc2dV9wRUxQbE5HUGEwMHl3aGg1ajU3OFR4aHZNcWt5bkVWeVZlM3dHSGZ6c1BtZkstaDVyd3d6aEtnNDlHcEtFQnpXc3dDb0FNYlpGeEoybjVLcnhjQUdIcTdFQmJUWlRNSDdRWUcyc3FHQmV6NEZOVUhBbExBR0pnTF94c0I5dkR3bG96Y1VabndZOFRIRWdYMFk3aW5Bb3hqWGJXTzczZnVQTGFDRC1lQlp6QTh3?oc=5\" target=\"_blank\">NYT slams Microsoft for building copyright-infringing supercomputer for OpenAI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Ars Technica</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNZkZOektrZmc2dV9wRUxQbE5HUGEwMHl3aGg1ajU3OFR4aHZNcWt5bkVWeVZlM3dHSGZ6c1BtZkstaDVyd3d6aEtnNDlHcEtFQnpXc3dDb0FNYlpGeEoybjVLcnhjQUdIcTdFQmJUWlRNSDdRWUcyc3FHQmV6NEZOVUhBbExBR0pnTF94c0I5dkR3bG96Y1VabndZOFRIRWdYMFk3aW5Bb3hqWGJXTzczZnVQTGFDRC1lQlp6QTh3?oc=5",
+      "publishedAt": "2026-06-26T20:04:55.000Z",
+      "engagement": {
+        "score": 91,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-ktl6rgv-mqw2o9dq",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "ServiceNow, Salesforce and Other Software Stocks Surge as the OpenAI Threat Weakens - Moomoo",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxQaW1LclhDTHdicXJpZ3FqanFVNHFwdTJfdE9HZ2QweWZoOUFoVWpOWnRlNHZkV0VrWnZCRTl1Q3Z2dzA4aXFlU2FIclBFMG9ybnpfaEdJdU1QR1lEMlJjbTJCaEx4MlZQaThuMy1BVjRkd0JhMzhfcV9JYUNkU01nNDBHYVNpcS1GbmZoWVVMdW1lX0NtaDJmeWtYQjZqWlJjU1k4eHBTXzZWZTM1VVE?oc=5\" target=\"_blank\">ServiceNow, Salesforce and Other Software Stocks Surge as the OpenAI Threat Weakens</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Moomoo</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaW1LclhDTHdicXJpZ3FqanFVNHFwdTJfdE9HZ2QweWZoOUFoVWpOWnRlNHZkV0VrWnZCRTl1Q3Z2dzA4aXFlU2FIclBFMG9ybnpfaEdJdU1QR1lEMlJjbTJCaEx4MlZQaThuMy1BVjRkd0JhMzhfcV9JYUNkU01nNDBHYVNpcS1GbmZoWVVMdW1lX0NtaDJmeWtYQjZqWlJjU1k4eHBTXzZWZTM1VVE?oc=5",
+      "publishedAt": "2026-06-26T22:15:02.000Z",
+      "engagement": {
+        "score": 90,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-t9cm11y-mqw2o9dr",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "Competition intensifies for Anthropic and OpenAI ahead of IPOs - Financial Times",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMihAFBVV95cUxOOFBkYnVTbU5JOThELUFmY3dabHFPYzVrOHI0YjA2Qk5RMDV1c0kxZHVQd2VCaEJTcEx0V0xPdXlKeEhDT1BNZW95Nmp5SGtLY1IwSjVURWdpYkxRdUxHTHVsNllFR2xvc0V3b1pqYkJVMXJuZzUyNU93cHpuYWo3VTBLWHY?oc=5\" target=\"_blank\">Competition intensifies for Anthropic and OpenAI ahead of IPOs</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Financial Times</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOOFBkYnVTbU5JOThELUFmY3dabHFPYzVrOHI0YjA2Qk5RMDV1c0kxZHVQd2VCaEJTcEx0V0xPdXlKeEhDT1BNZW95Nmp5SGtLY1IwSjVURWdpYkxRdUxHTHVsNllFR2xvc0V3b1pqYkJVMXJuZzUyNU93cHpuYWo3VTBLWHY?oc=5",
+      "publishedAt": "2026-06-25T16:48:50.000Z",
+      "engagement": {
+        "score": 89,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-1yyslao-mqw2o9dr",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "Broadcom, Micron, AMD, and Other AI Chip Stocks Slumped on Friday. You Can Thank OpenAI and SpaceX. - The Motley Fool",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRUJkSko3V055d3VUclN6R0pUbzh5S0c3QmFUbjNvUl9ZVWcySHkxRXBqSXJvZDF6NVVySElvQWl0STZUQUd5RGRhUHhIdU9ONEplSU9vSzg1eXFlbUhCT0ladTQ2N1lkVS1JVXlMa2xKaU4xZjIzbzBQWGgwbk9BM2FnT09IXzl3TWxwZEp3dDR1bGctdUV0YzNPM2dicmRXMlN1TW9HZGphTHVyaWlGRVZ5YVJ1UDEyb1I4T3llLWlFa0tlWW9aNjFLcTV2ZVU0RDc0?oc=5\" target=\"_blank\">Broadcom, Micron, AMD, and Other AI Chip Stocks Slumped on Friday. You Can Thank OpenAI and SpaceX.</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Motley Fool</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPRUJkSko3V055d3VUclN6R0pUbzh5S0c3QmFUbjNvUl9ZVWcySHkxRXBqSXJvZDF6NVVySElvQWl0STZUQUd5RGRhUHhIdU9ONEplSU9vSzg1eXFlbUhCT0ladTQ2N1lkVS1JVXlMa2xKaU4xZjIzbzBQWGgwbk9BM2FnT09IXzl3TWxwZEp3dDR1bGctdUV0YzNPM2dicmRXMlN1TW9HZGphTHVyaWlGRVZ5YVJ1UDEyb1I4T3llLWlFa0tlWW9aNjFLcTV2ZVU0RDc0?oc=5",
+      "publishedAt": "2026-06-26T20:32:00.000Z",
+      "engagement": {
+        "score": 88,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-tsycz8l-mqw2o9dr",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "China's Zhipu is closing in on top U.S. AI models with Anthropic and OpenAI held back - CNBC",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPSFBiWXhDV3VHdk83TGVfaWRuem1fODFCeUg2ckJFcGlXZzJFYUJKTzFQb0FKQ1BJLUZZN0Z3VkxKOW5Yb0lEQkw4WXB5cTRsenFGdnZLUURTeW1KdWZGakFWdlV0dFNRVkdpcElQS3lRNDhSN2x4R2xQT0FCT1Yxa01SbDdkNFdFM2fSAY8BQVVfeXFMTkFzUHpXWjJ3dGkybjdSLXBaNTEyX1Uyek4zU2ROMDRBbU5MdkV5Y3BwRm9PNEx5dzYyRDF5Y0ItMVNPZEVEZ1QzVWFRZHRhbVBJQ2FMRm01Wl9NMkxfbVVzaWcyMmh5bTczQy05MWtSeFRUWUxyeFZoekV2S0kzQXA3Si1xb2ltNVRNQXpXZWs?oc=5\" target=\"_blank\">China's Zhipu is closing in on top U.S. AI models with Anthropic and OpenAI held back</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPSFBiWXhDV3VHdk83TGVfaWRuem1fODFCeUg2ckJFcGlXZzJFYUJKTzFQb0FKQ1BJLUZZN0Z3VkxKOW5Yb0lEQkw4WXB5cTRsenFGdnZLUURTeW1KdWZGakFWdlV0dFNRVkdpcElQS3lRNDhSN2x4R2xQT0FCT1Yxa01SbDdkNFdFM2fSAY8BQVVfeXFMTkFzUHpXWjJ3dGkybjdSLXBaNTEyX1Uyek4zU2ROMDRBbU5MdkV5Y3BwRm9PNEx5dzYyRDF5Y0ItMVNPZEVEZ1QzVWFRZHRhbVBJQ2FMRm01Wl9NMkxfbVVzaWcyMmh5bTczQy05MWtSeFRUWUxyeFZoekV2S0kzQXA3Si1xb2ltNVRNQXpXZWs?oc=5",
+      "publishedAt": "2026-06-26T22:08:09.000Z",
+      "engagement": {
+        "score": 87,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-vz2i77a-mqw2o9dr",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "ChatGPT owner OpenAI may delay IPO until 2027 on tech stock volatility, NYT reports - The Straits Times",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMi4wFBVV95cUxNbHdQM3lndkh1anl2ZXdfVmZRbjRDTjE3VWtKTUhuZ3V4UjI5cEVoVzhkVTRSZ1l4d3dvbEJyN3pJdmRSN0czZlRqcFQ3a1NBc0poaV84bkNMVE12bTlHcDIxekFpQ2taV2lmQTI5dzQ1a3ROWWM4TEs2cWdIVnRmSmpwSW5LVmxvYWFxckZIa1BET0txVWw4YnJ3dFl6dUFPcWVQMEpNTWFyQ2FUVlV6RkE3Y1F1SzhCbmV0QW1uQS1NTkZHYkY2T1IzVkJDOTBRbnRrVjBrb0s2c3hsancyeGNDRQ?oc=5\" target=\"_blank\">ChatGPT owner OpenAI may delay IPO until 2027 on tech stock volatility, NYT reports</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Straits Times</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNbHdQM3lndkh1anl2ZXdfVmZRbjRDTjE3VWtKTUhuZ3V4UjI5cEVoVzhkVTRSZ1l4d3dvbEJyN3pJdmRSN0czZlRqcFQ3a1NBc0poaV84bkNMVE12bTlHcDIxekFpQ2taV2lmQTI5dzQ1a3ROWWM4TEs2cWdIVnRmSmpwSW5LVmxvYWFxckZIa1BET0txVWw4YnJ3dFl6dUFPcWVQMEpNTWFyQ2FUVlV6RkE3Y1F1SzhCbmV0QW1uQS1NTkZHYkY2T1IzVkJDOTBRbnRrVjBrb0s2c3hsancyeGNDRQ?oc=5",
+      "publishedAt": "2026-06-26T02:21:31.000Z",
+      "engagement": {
+        "score": 146,
+        "comments": 0
+      },
+      "relevanceScore": 128,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-kjixpof-mqw2o9ds",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI and Broadcom unveil LLM-optimized inference chip - OpenAI",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMic0FVX3lxTE5IcjFBSWc3NkotMVUzaDNHaWJBcWVtQXZHbnhpUVZrekpPWENRNEZrQ2hOdTFnejg2WTdvWFNQeFI3RGJnRE9qTFI3czJQX28tQUd3OC1ncFlEMnJtQmdONE8ya1NOa1BVOHhVTGNjdUkxbDg?oc=5\" target=\"_blank\">OpenAI and Broadcom unveil LLM-optimized inference chip</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">OpenAI</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5IcjFBSWc3NkotMVUzaDNHaWJBcWVtQXZHbnhpUVZrekpPWENRNEZrQ2hOdTFnejg2WTdvWFNQeFI3RGJnRE9qTFI3czJQX28tQUd3OC1ncFlEMnJtQmdONE8ya1NOa1BVOHhVTGNjdUkxbDg?oc=5",
+      "publishedAt": "2026-06-24T13:05:15.000Z",
+      "engagement": {
+        "score": 85,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-9299c5w-mqw2o9ds",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI is reportedly delaying its IPO. Here's when Kalshi traders think it will announce - CNBC",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLVBLVjBuSldnMjNDNXIxa0ozM016WWgzZXRCNl9lNlNXSGRYREFERXd2czlhM0xCWndqa3VjS3FRSWYwYXNTcFBoaUJGd3N6U29ZbXkwbWJER3BVa0d2SU5FSUd3OWRTWHpwNXVaMl9GclFBdWNZYTgydlhYc2RYMlBmSjBHbVFHM2930gGQAUFVX3lxTFBTcU1RUzNiQXZ2SERKYVVibmtuVl9TSHRyb3VGcjV2VkdKcUlwLWt0WnJCN1pQVFdYdndJc1dVX2draVNLTVdUSE1aU180YnVWdE9zTS1oRlhGZHJxSkpmLXZpUVdDeEVEUFpiQjNmdXo1UVFtN2NIRVQ1amZ0Q3NQTlJURXV1QUtkVXVoNVIyOQ?oc=5\" target=\"_blank\">OpenAI is reportedly delaying its IPO. Here's when Kalshi traders think it will announce</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPLVBLVjBuSldnMjNDNXIxa0ozM016WWgzZXRCNl9lNlNXSGRYREFERXd2czlhM0xCWndqa3VjS3FRSWYwYXNTcFBoaUJGd3N6U29ZbXkwbWJER3BVa0d2SU5FSUd3OWRTWHpwNXVaMl9GclFBdWNZYTgydlhYc2RYMlBmSjBHbVFHM2930gGQAUFVX3lxTFBTcU1RUzNiQXZ2SERKYVVibmtuVl9TSHRyb3VGcjV2VkdKcUlwLWt0WnJCN1pQVFdYdndJc1dVX2draVNLTVdUSE1aU180YnVWdE9zTS1oRlhGZHJxSkpmLXZpUVdDeEVEUFpiQjNmdXo1UVFtN2NIRVQ1amZ0Q3NQTlJURXV1QUtkVXVoNVIyOQ?oc=5",
+      "publishedAt": "2026-06-26T14:46:01.000Z",
+      "engagement": {
+        "score": 84,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-d891gjj-mqw2o9ds",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI limits release of new model under pressure from US - The Edge Malaysia",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMiUEFVX3lxTE9ZSzcwZWd0R21qcEZqYTh5cXBQbERON0xRa255LWh0UFY3WEVzTUIyUHp3UUUzYkRGSElNWWFQVkh1LWxlalpFTTNXVjJyOEZC?oc=5\" target=\"_blank\">OpenAI limits release of new model under pressure from US</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Edge Malaysia</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9ZSzcwZWd0R21qcEZqYTh5cXBQbERON0xRa255LWh0UFY3WEVzTUIyUHp3UUUzYkRGSElNWWFQVkh1LWxlalpFTTNXVjJyOEZC?oc=5",
+      "publishedAt": "2026-06-27T05:27:31.000Z",
+      "engagement": {
+        "score": 83,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-p8yv78g-mqw2o9ds",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI IPO Fears Hit Oracle and Other Stocks Exposed to the ChatGPT Maker - Barron's",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMigAFBVV95cUxNUUtSd19xQ2ZudEYxOFQxRk5INnd3U1BjaUtuVzR4cFpFS1BZakktcUVieGh3OWY4VmsxaUppbTZvM0xaNi0xUVo5amJ0TGtSWThYUi10cWVXSkd5YmRlRC1iUU9jOTJjSkJfRGFhcW5qTndXNHRES1NDT1dzYmp3eA?oc=5\" target=\"_blank\">OpenAI IPO Fears Hit Oracle and Other Stocks Exposed to the ChatGPT Maker</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Barron's</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUUtSd19xQ2ZudEYxOFQxRk5INnd3U1BjaUtuVzR4cFpFS1BZakktcUVieGh3OWY4VmsxaUppbTZvM0xaNi0xUVo5amJ0TGtSWThYUi10cWVXSkd5YmRlRC1iUU9jOTJjSkJfRGFhcW5qTndXNHRES1NDT1dzYmp3eA?oc=5",
+      "publishedAt": "2026-06-26T17:55:00.000Z",
+      "engagement": {
+        "score": 142,
+        "comments": 0
+      },
+      "relevanceScore": 128,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-ms61xb5-mqw2o9ds",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI defers public rollout of GPT‑5.6 as US seeks early access to frontier AI models - Reuters",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMixwFBVV95cUxQUnFfdzFOMEtRZ2xQYThDMDl3OFlWUDVFQ3VFelowLVVHUGt0TktoUHMzamJDekMzS09jaGR5RU9EaVNsNmdKR1JYSzVwbGNneUVaWWlnQzM4YnUxZGp3ZkthVlYyUGhXMUtDSjNZVC1YSGlpeDYxVjBOTkdSeGltaC15TjRqYVJiQnlxVlhjY01ZODRVQURFMjZEbVdaUHRJV2JlNklyRXRpNzAxbnVDS1dETk82WjJxLXZFdFRrSk8tTDJJZTJF?oc=5\" target=\"_blank\">OpenAI defers public rollout of GPT‑5.6 as US seeks early access to frontier AI models</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQUnFfdzFOMEtRZ2xQYThDMDl3OFlWUDVFQ3VFelowLVVHUGt0TktoUHMzamJDekMzS09jaGR5RU9EaVNsNmdKR1JYSzVwbGNneUVaWWlnQzM4YnUxZGp3ZkthVlYyUGhXMUtDSjNZVC1YSGlpeDYxVjBOTkdSeGltaC15TjRqYVJiQnlxVlhjY01ZODRVQURFMjZEbVdaUHRJV2JlNklyRXRpNzAxbnVDS1dETk82WjJxLXZFdFRrSk8tTDJJZTJF?oc=5",
+      "publishedAt": "2026-06-26T22:22:46.000Z",
+      "engagement": {
+        "score": 81,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-kzhrtw0-mqw2o9ds",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "Uber India president Prabhjeet Singh steps down, joins OpenAI as India MD - DealStreetAsia",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxNQUMtVUZ4MGZJRHp6WDJ3U3N2Rjg2SUU1LTRaM1BDSTN3WkU0MmRQX2RiQnJzT1czekoyOENVRnRWYzJwQTZnTkxqTWVhekg1UUxCQ1dHcGxUZno3eUVPVkJMWUlUQWhtMUl3MzFldnYtbHdLcUlTSFI0OUpPYVFkeFpkUi1pTWFxUHNxelRB?oc=5\" target=\"_blank\">Uber India president Prabhjeet Singh steps down, joins OpenAI as India MD</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">DealStreetAsia</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNQUMtVUZ4MGZJRHp6WDJ3U3N2Rjg2SUU1LTRaM1BDSTN3WkU0MmRQX2RiQnJzT1czekoyOENVRnRWYzJwQTZnTkxqTWVhekg1UUxCQ1dHcGxUZno3eUVPVkJMWUlUQWhtMUl3MzFldnYtbHdLcUlTSFI0OUpPYVFkeFpkUi1pTWFxUHNxelRB?oc=5",
+      "publishedAt": "2026-06-26T17:53:24.000Z",
+      "engagement": {
+        "score": 80,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-ebwwsha-mqw2o9ds",
+      "sourceId": "src-a5cts65-mqw2nxca",
+      "sourceType": "rss",
+      "title": "OpenAI introduces GPT-5.6 to challenge Claude Mythos 5 - SiliconANGLE",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMikgFBVV95cUxNbFlxY004WkxNT1pxYkc5bzhPRGdFdS04RF9jZy0wZE9mRjAtZ2k0NkFlajY1UGR0NEVYMXg1cDZBQkpra05iRmNrUlVfOVpaa3VIZEJHX0VodmpmU3pDbkp2WThRNzhqZ1RwZEtiTXJib1ExRWJzclVWZWR2Q0p6Y2tNZUdnVlZwRDZJOXh4WkZWZw?oc=5\" target=\"_blank\">OpenAI introduces GPT-5.6 to challenge Claude Mythos 5</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">SiliconANGLE</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNbFlxY004WkxNT1pxYkc5bzhPRGdFdS04RF9jZy0wZE9mRjAtZ2k0NkFlajY1UGR0NEVYMXg1cDZBQkpra05iRmNrUlVfOVpaa3VIZEJHX0VodmpmU3pDbkp2WThRNzhqZ1RwZEtiTXJib1ExRWJzclVWZWR2Q0p6Y2tNZUdnVlZwRDZJOXh4WkZWZw?oc=5",
+      "publishedAt": "2026-06-26T23:32:56.000Z",
+      "engagement": {
+        "score": 79,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-vr4lcsn-mqw2o9ds",
+      "sourceId": "src-jr1x0it-mqw2nstw",
+      "sourceType": "reddit",
+      "title": "Reddit thread highlights adoption friction",
+      "text": "Operators say OpenAI is useful for repeated workflows, while skeptics flag vendor lock-in and support quality as risks.",
+      "author": "Reddit search query",
+      "url": "https://example.com/reddit/OpenAI",
+      "publishedAt": "2026-06-27T08:02:39.616Z",
+      "engagement": {
+        "score": 70,
+        "comments": 18
+      },
+      "bucket": "recent"
+    },
+    {
+      "id": "item-r5olk7q-mqw2o9ds",
+      "sourceId": "src-jr1x0it-mqw2nstw",
+      "sourceType": "reddit",
+      "title": "Community compares alternatives",
+      "text": "The discussion is mixed, with positive sentiment around capability and negative sentiment around cost.",
+      "author": "Reddit search query",
+      "url": "https://example.com/reddit/OpenAI",
+      "publishedAt": "2026-06-27T06:50:39.616Z",
+      "engagement": {
+        "score": 94,
+        "comments": 30
+      },
+      "bucket": "top"
+    },
+    {
+      "id": "item-ts5w79x-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI Will Initially Only Release ChatGPT 5.6 To Government-Approved Customers - Engadget",
@@ -299,7 +804,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-dbj0cg7-mqw154sv",
+      "id": "item-zjbllvs-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI IPO Fears Hit Oracle and Other Stocks Exposed to the ChatGPT Maker - Barron's",
@@ -315,7 +820,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-6otnd1r-mqw154sv",
+      "id": "item-tlqg0gr-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI and Anthropic limit new AI models to Trump-approved customers during cybersecurity review - AP News",
@@ -331,7 +836,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-2yowr8y-mqw154sv",
+      "id": "item-m7pf1aj-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI just announced its first custom chip to help ChatGPT run better | CNN Business - CNN",
@@ -347,7 +852,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-2qgm7bp-mqw154sv",
+      "id": "item-3wjtpl1-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "Only Users Approved By U.S. Can Access OpenAI’s New ChatGPT Model - Forbes",
@@ -363,7 +868,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-6xom0rf-mqw154sv",
+      "id": "item-o4b7psw-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI's updated GPT-5.5 Instant is better at shopping, complex constraints, and understanding user intent — and it's already in the API - VentureBeat",
@@ -379,7 +884,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-dbheddq-mqw154sv",
+      "id": "item-oaxdj0g-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI upgrading ChatGPT and Codex with new GPT-5.6 models in limited release - 9to5Mac",
@@ -395,7 +900,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-k2jm51y-mqw154sw",
+      "id": "item-oytyzpj-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI's ChatGPT-5.6 gets the same banhammer treatment as Anthropic’s Mythos from the federal government — source says that Washington cautioned OpenAI against releasing the model without receiving approval - Tom's Hardware",
@@ -411,7 +916,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-e3gqx0j-mqw154sw",
+      "id": "item-208mly6-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI and Broadcom unveil LLM-optimized inference chip - OpenAI",
@@ -427,23 +932,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-0czydr0-mqw154sx",
-      "sourceId": "src-rss-1",
-      "sourceType": "rss",
-      "title": "OpenAI limits new AI models to 'trusted partners' at request of U.S. government - CNBC",
-      "text": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbXc3S3VNWkFPMXVnZmZSRWhFYmpaQTV5X0NuMFJsUlZiRHZPY2lfNlJ0U0VNUTFlLUpNNFFCRC01akpSX3hET0IzM21IRVBaYmVYOHRlLWN0LXhmajhzZDQyd2pSSUVSUnFKek5oQ0xjUDhIRi05ZFZCcVIzUndQQjZGQUJ3V0piMGNjMF9WQ0NDYUdCb3V6a095emJpSlV5eFJYZEx2ck5sd9IBrwFBVV95cUxNQ2tyUVkzakNiV1hERTNhVXNKdXAwWmVmZU5MeEg5QUhMYzB4dVBPYzBMZWxPRUhBTm9MYlZfbWRzaUllS19PMjU1MkNWRGtCNVNGQWhYemttSWtyTGhnTU9CLWVhQUd1MXFIb1VjNXVDSE9hX0tubVpuSTB6MTBDMlFzejk5Z2MyNEdVY0xsQTdrdjBlS2pVWUo3eTgwc0hFWlI1emNVMDZ1c3NaT3pZ?oc=5\" target=\"_blank\">OpenAI limits new AI models to 'trusted partners' at request of U.S. government</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
-      "author": "news.google.com",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbXc3S3VNWkFPMXVnZmZSRWhFYmpaQTV5X0NuMFJsUlZiRHZPY2lfNlJ0U0VNUTFlLUpNNFFCRC01akpSX3hET0IzM21IRVBaYmVYOHRlLWN0LXhmajhzZDQyd2pSSUVSUnFKek5oQ0xjUDhIRi05ZFZCcVIzUndQQjZGQUJ3V0piMGNjMF9WQ0NDYUdCb3V6a095emJpSlV5eFJYZEx2ck5sd9IBrwFBVV95cUxNQ2tyUVkzakNiV1hERTNhVXNKdXAwWmVmZU5MeEg5QUhMYzB4dVBPYzBMZWxPRUhBTm9MYlZfbWRzaUllS19PMjU1MkNWRGtCNVNGQWhYemttSWtyTGhnTU9CLWVhQUd1MXFIb1VjNXVDSE9hX0tubVpuSTB6MTBDMlFzejk5Z2MyNEdVY0xsQTdrdjBlS2pVWUo3eTgwc0hFWlI1emNVMDZ1c3NaT3pZ?oc=5",
-      "publishedAt": "2026-06-26T17:02:44.000Z",
-      "engagement": {
-        "score": 87,
-        "comments": 0
-      },
-      "relevanceScore": 68,
-      "bucket": "recent"
-    },
-    {
-      "id": "item-hdlka14-mqw154sx",
+      "id": "item-nn85a3b-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI defers public rollout of GPT‑5.6 as US seeks early access to frontier AI models - Reuters",
@@ -452,6 +941,22 @@
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQUnFfdzFOMEtRZ2xQYThDMDl3OFlWUDVFQ3VFelowLVVHUGt0TktoUHMzamJDekMzS09jaGR5RU9EaVNsNmdKR1JYSzVwbGNneUVaWWlnQzM4YnUxZGp3ZkthVlYyUGhXMUtDSjNZVC1YSGlpeDYxVjBOTkdSeGltaC15TjRqYVJiQnlxVlhjY01ZODRVQURFMjZEbVdaUHRJV2JlNklyRXRpNzAxbnVDS1dETk82WjJxLXZFdFRrSk8tTDJJZTJF?oc=5",
       "publishedAt": "2026-06-26T22:22:46.000Z",
       "engagement": {
+        "score": 87,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-c5kteov-mqw2o9e8",
+      "sourceId": "src-rss-1",
+      "sourceType": "rss",
+      "title": "OpenAI limits new AI models to 'trusted partners' at request of U.S. government - CNBC",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbXc3S3VNWkFPMXVnZmZSRWhFYmpaQTV5X0NuMFJsUlZiRHZPY2lfNlJ0U0VNUTFlLUpNNFFCRC01akpSX3hET0IzM21IRVBaYmVYOHRlLWN0LXhmajhzZDQyd2pSSUVSUnFKek5oQ0xjUDhIRi05ZFZCcVIzUndQQjZGQUJ3V0piMGNjMF9WQ0NDYUdCb3V6a095emJpSlV5eFJYZEx2ck5sd9IBrwFBVV95cUxNQ2tyUVkzakNiV1hERTNhVXNKdXAwWmVmZU5MeEg5QUhMYzB4dVBPYzBMZWxPRUhBTm9MYlZfbWRzaUllS19PMjU1MkNWRGtCNVNGQWhYemttSWtyTGhnTU9CLWVhQUd1MXFIb1VjNXVDSE9hX0tubVpuSTB6MTBDMlFzejk5Z2MyNEdVY0xsQTdrdjBlS2pVWUo3eTgwc0hFWlI1emNVMDZ1c3NaT3pZ?oc=5\" target=\"_blank\">OpenAI limits new AI models to 'trusted partners' at request of U.S. government</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPbXc3S3VNWkFPMXVnZmZSRWhFYmpaQTV5X0NuMFJsUlZiRHZPY2lfNlJ0U0VNUTFlLUpNNFFCRC01akpSX3hET0IzM21IRVBaYmVYOHRlLWN0LXhmajhzZDQyd2pSSUVSUnFKek5oQ0xjUDhIRi05ZFZCcVIzUndQQjZGQUJ3V0piMGNjMF9WQ0NDYUdCb3V6a095emJpSlV5eFJYZEx2ck5sd9IBrwFBVV95cUxNQ2tyUVkzakNiV1hERTNhVXNKdXAwWmVmZU5MeEg5QUhMYzB4dVBPYzBMZWxPRUhBTm9MYlZfbWRzaUllS19PMjU1MkNWRGtCNVNGQWhYemttSWtyTGhnTU9CLWVhQUd1MXFIb1VjNXVDSE9hX0tubVpuSTB6MTBDMlFzejk5Z2MyNEdVY0xsQTdrdjBlS2pVWUo3eTgwc0hFWlI1emNVMDZ1c3NaT3pZ?oc=5",
+      "publishedAt": "2026-06-26T17:02:44.000Z",
+      "engagement": {
         "score": 86,
         "comments": 0
       },
@@ -459,7 +964,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-5uvux3r-mqw154sx",
+      "id": "item-u7m88e1-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI limits its latest ChatGPT product to Trump-approved customers during cybersecurity review - ABC News - Breaking News, Latest News and Videos",
@@ -475,7 +980,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-5jf5l9y-mqw154sy",
+      "id": "item-t4cm2d6-mqw2o9e8",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "ChatGPT’s powerful GPT-5.6 models arrive, but not for you - PCWorld",
@@ -491,7 +996,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-yzh3w6q-mqw154sz",
+      "id": "item-gx86sui-mqw2o9e9",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI Has New AI Models. Here’s Why You Can’t Use Them - WIRED",
@@ -507,7 +1012,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-5id789l-mqw154sz",
+      "id": "item-buvey68-mqw2o9e9",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI limits GPT-5.6 rollout after government request, says restrictions shouldn’t be the norm - TechCrunch",
@@ -523,7 +1028,7 @@
       "bucket": "recent"
     },
     {
-      "id": "item-pt5tnw7-mqw154sz",
+      "id": "item-bqwp9ys-mqw2o9e9",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
       "title": "OpenAI releases powerful new GPT-5.6 model under restrictions - Axios",
@@ -533,6 +1038,38 @@
       "publishedAt": "2026-06-26T17:22:37.000Z",
       "engagement": {
         "score": 81,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-xk6ntjr-mqw2o9e9",
+      "sourceId": "src-rss-1",
+      "sourceType": "rss",
+      "title": "Apple’s Vision Pro and Smart Glasses Chief to Join OpenAI - Bloomberg.com",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQanNmRDl4VjEtcDNPRVFrOHdBWHJuOTlFUXlwcnM2cm9OalcyZnVneXhzanh6NC10ZzJrVkpZQzJpbXFVdmxBNEJqZmdnbWpZaUZCXzRrdnRKUm1IeloxVldiejFXbFR1N3ZnaVh0c2dNeHNra2Q1Tlo1dGxpMFU2SDY2Q2RGQ01SVVljb2lSNjZSZFVfQ2pJU2w2aWIwakpZVlZvSS1NVVgwNFRtcGpzQTg1c1RBdk1rb0NoWUI4eFZncWpT?oc=5\" target=\"_blank\">Apple’s Vision Pro and Smart Glasses Chief to Join OpenAI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQanNmRDl4VjEtcDNPRVFrOHdBWHJuOTlFUXlwcnM2cm9OalcyZnVneXhzanh6NC10ZzJrVkpZQzJpbXFVdmxBNEJqZmdnbWpZaUZCXzRrdnRKUm1IeloxVldiejFXbFR1N3ZnaVh0c2dNeHNra2Q1Tlo1dGxpMFU2SDY2Q2RGQ01SVVljb2lSNjZSZFVfQ2pJU2w2aWIwakpZVlZvSS1NVVgwNFRtcGpzQTg1c1RBdk1rb0NoWUI4eFZncWpT?oc=5",
+      "publishedAt": "2026-06-26T19:31:01.000Z",
+      "engagement": {
+        "score": 80,
+        "comments": 0
+      },
+      "relevanceScore": 68,
+      "bucket": "recent"
+    },
+    {
+      "id": "item-8ictple-mqw2o9e9",
+      "sourceId": "src-rss-1",
+      "sourceType": "rss",
+      "title": "OpenAI staggers AI model release after Trump administration request - The Guardian",
+      "text": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHpsR0FaODVIVE4zSnJ6NUpxYzNLbmFwQWJscnh6bEZlS1BUSE1TOGxEd3B1WlhpUWk2bVZkejJWejVqSG5WNUhSR3NKS2tCQTRxX2MwSTloaXNHeTVwZmFJeFZkWG1MX2dtTW92VlhVclZXZ3JhcUZ4TnB1Wl85VzZkcTRwYWxtanZ0UkhuejYtNTJmVkk0WEo3S1pHMkVFOS1qcnR5RVU0QlVZQkJUUHNoc3lNdw?oc=5\" target=\"_blank\">OpenAI staggers AI model release after Trump administration request</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
+      "author": "news.google.com",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHpsR0FaODVIVE4zSnJ6NUpxYzNLbmFwQWJscnh6bEZlS1BUSE1TOGxEd3B1WlhpUWk2bVZkejJWejVqSG5WNUhSR3NKS2tCQTRxX2MwSTloaXNHeTVwZmFJeFZkWG1MX2dtTW92VlhVclZXZ3JhcUZ4TnB1Wl85VzZkcTRwYWxtanZ0UkhuejYtNTJmVkk0WEo3S1pHMkVFOS1qcnR5RVU0QlVZQkJUUHNoc3lNdw?oc=5",
+      "publishedAt": "2026-06-26T14:06:00.000Z",
+      "engagement": {
+        "score": 79,
         "comments": 0
       },
       "relevanceScore": 68,
@@ -549,22 +1086,6 @@
       "publishedAt": "2026-06-25T20:31:22.000Z",
       "engagement": {
         "score": 80,
-        "comments": 0
-      },
-      "relevanceScore": 68,
-      "bucket": "recent"
-    },
-    {
-      "id": "item-kvz895c-mqw154sz",
-      "sourceId": "src-rss-1",
-      "sourceType": "rss",
-      "title": "OpenAI staggers AI model release after Trump administration request - The Guardian",
-      "text": "<a href=\"https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHpsR0FaODVIVE4zSnJ6NUpxYzNLbmFwQWJscnh6bEZlS1BUSE1TOGxEd3B1WlhpUWk2bVZkejJWejVqSG5WNUhSR3NKS2tCQTRxX2MwSTloaXNHeTVwZmFJeFZkWG1MX2dtTW92VlhVclZXZ3JhcUZ4TnB1Wl85VzZkcTRwYWxtanZ0UkhuejYtNTJmVkk0WEo3S1pHMkVFOS1qcnR5RVU0QlVZQkJUUHNoc3lNdw?oc=5\" target=\"_blank\">OpenAI staggers AI model release after Trump administration request</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Guardian</font>",
-      "author": "news.google.com",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZHpsR0FaODVIVE4zSnJ6NUpxYzNLbmFwQWJscnh6bEZlS1BUSE1TOGxEd3B1WlhpUWk2bVZkejJWejVqSG5WNUhSR3NKS2tCQTRxX2MwSTloaXNHeTVwZmFJeFZkWG1MX2dtTW92VlhVclZXZ3JhcUZ4TnB1Wl85VzZkcTRwYWxtanZ0UkhuejYtNTJmVkk0WEo3S1pHMkVFOS1qcnR5RVU0QlVZQkJUUHNoc3lNdw?oc=5",
-      "publishedAt": "2026-06-26T14:06:00.000Z",
-      "engagement": {
-        "score": 79,
         "comments": 0
       },
       "relevanceScore": 68,
@@ -1300,22 +1821,6 @@
       "bucket": "recent"
     },
     {
-      "id": "item-hs9qaes-mqvyf9cz",
-      "sourceId": "src-rss-1",
-      "sourceType": "rss",
-      "title": "Apple’s Vision Pro and Smart Glasses Chief to Join OpenAI - Bloomberg.com",
-      "text": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQanNmRDl4VjEtcDNPRVFrOHdBWHJuOTlFUXlwcnM2cm9OalcyZnVneXhzanh6NC10ZzJrVkpZQzJpbXFVdmxBNEJqZmdnbWpZaUZCXzRrdnRKUm1IeloxVldiejFXbFR1N3ZnaVh0c2dNeHNra2Q1Tlo1dGxpMFU2SDY2Q2RGQ01SVVljb2lSNjZSZFVfQ2pJU2w2aWIwakpZVlZvSS1NVVgwNFRtcGpzQTg1c1RBdk1rb0NoWUI4eFZncWpT?oc=5\" target=\"_blank\">Apple’s Vision Pro and Smart Glasses Chief to Join OpenAI</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bloomberg.com</font>",
-      "author": "news.google.com",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQanNmRDl4VjEtcDNPRVFrOHdBWHJuOTlFUXlwcnM2cm9OalcyZnVneXhzanh6NC10ZzJrVkpZQzJpbXFVdmxBNEJqZmdnbWpZaUZCXzRrdnRKUm1IeloxVldiejFXbFR1N3ZnaVh0c2dNeHNra2Q1Tlo1dGxpMFU2SDY2Q2RGQ01SVVljb2lSNjZSZFVfQ2pJU2w2aWIwakpZVlZvSS1NVVgwNFRtcGpzQTg1c1RBdk1rb0NoWUI4eFZncWpT?oc=5",
-      "publishedAt": "2026-06-26T19:22:17.000Z",
-      "engagement": {
-        "score": 79,
-        "comments": 0
-      },
-      "relevanceScore": 68,
-      "bucket": "recent"
-    },
-    {
       "id": "item-demo-1",
       "sourceId": "src-rss-1",
       "sourceType": "rss",
@@ -1377,6 +1882,1509 @@
     }
   ],
   "runs": [
+    {
+      "id": "run-y56zpr8-mqw2pr9m",
+      "monitorId": "monitor-jomm3nt-mqw2p4b1",
+      "status": "complete",
+      "startedAt": "2026-06-27T08:03:49.450Z",
+      "completedAt": "2026-06-27T08:03:49.552Z",
+      "sourceCoverage": [
+        {
+          "sourceId": "src-13rs2lf-mqw2pmzk",
+          "collected": 3,
+          "status": "active"
+        }
+      ],
+      "itemIds": [
+        "item-if9pm1s-mqw2prce",
+        "item-5jug6rp-mqw2prce",
+        "item-bhian4n-mqw2prcf"
+      ],
+      "itemInsights": [
+        {
+          "itemId": "item-if9pm1s-mqw2prce",
+          "sentiment": "neutral",
+          "relevance": 30,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-5jug6rp-mqw2prce",
+          "sentiment": "neutral",
+          "relevance": 30,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-bhian4n-mqw2prcf",
+          "sentiment": "negative",
+          "relevance": 30,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as negative; main themes are Race performance.",
+          "whyItMatters": "This item may need monitoring because negative framing can spread across sources."
+        }
+      ],
+      "summary": {
+        "overallSentiment": "mixed",
+        "confidence": 82,
+        "distribution": {
+          "positive": 0,
+          "neutral": 2,
+          "negative": 1,
+          "mixed": 0
+        },
+        "executiveSummary": "Kimi Antonelli is currently showing mixed public sentiment across 3 matched items. Coverage breaks down as 1 negative. Negative coverage includes ChatGPT owner OpenAI may delay IPO until 2027…. The strongest themes are race performance, general reputation. No severe risk cluster dominates the current sample.",
+        "whatChanged": "Recent items are led by OpenAI and Anthropic face new AI reality as…; OpenAI staggers AI model release after Trump administration…; ChatGPT owner OpenAI may delay IPO until 2027…, while top-ranked items emphasize the strongest matches.",
+        "themes": [
+          {
+            "name": "Race performance",
+            "count": 2,
+            "sentiment": "neutral"
+          },
+          {
+            "name": "General reputation",
+            "count": 1,
+            "sentiment": "neutral"
+          }
+        ],
+        "risks": [
+          "No concentrated crisis signal detected."
+        ],
+        "opportunities": [
+          "Use positive enterprise and workflow commentary in stakeholder updates.",
+          "Add more primary RSS feeds to improve source diversity.",
+          "Track YouTube comments if API access is enabled for richer public reaction."
+        ],
+        "recommendedActions": [
+          "Review high-relevance negative evidence before external messaging.",
+          "Add at least two independent RSS feeds for triangulation.",
+          "Create an alert for negative sentiment plus high engagement."
+        ],
+        "recommendedSources": [
+          {
+            "type": "rss",
+            "name": "Google News RSS",
+            "url": "https://news.google.com/rss/search?q=Kimi%20Antonelli",
+            "reason": "Broad recent news coverage for the monitored subject."
+          },
+          {
+            "type": "rss",
+            "name": "Bing News RSS",
+            "url": "https://www.bing.com/news/search?q=Kimi%20Antonelli&format=rss",
+            "reason": "Second news index for cross-checking sentiment drift."
+          },
+          {
+            "type": "youtube",
+            "name": "YouTube search query",
+            "url": "youtube:Kimi Antonelli review OR reaction",
+            "reason": "High-signal comments and creator reaction."
+          },
+          {
+            "type": "reddit",
+            "name": "Reddit search query",
+            "url": "reddit:Kimi Antonelli",
+            "reason": "Discussion-heavy public sentiment."
+          },
+          {
+            "type": "x",
+            "name": "X search query",
+            "url": "x:Kimi Antonelli lang:en",
+            "reason": "Fast-moving rumor and breaking narrative detection."
+          }
+        ],
+        "sourceBreakdown": [
+          {
+            "type": "rss",
+            "count": 3,
+            "sentiment": "neutral"
+          },
+          {
+            "type": "youtube",
+            "count": 0,
+            "sentiment": "none"
+          },
+          {
+            "type": "reddit",
+            "count": 0,
+            "sentiment": "none"
+          },
+          {
+            "type": "x",
+            "count": 0,
+            "sentiment": "none"
+          }
+        ],
+        "generatedBy": "heuristic"
+      }
+    },
+    {
+      "id": "run-4xukvee-mqw2p712",
+      "monitorId": "monitor-jomm3nt-mqw2p4b1",
+      "status": "complete",
+      "startedAt": "2026-06-27T08:03:23.222Z",
+      "completedAt": "2026-06-27T08:03:23.223Z",
+      "sourceCoverage": [],
+      "itemIds": [],
+      "itemInsights": [],
+      "summary": {
+        "overallSentiment": "positive",
+        "confidence": 66,
+        "distribution": {
+          "positive": 0,
+          "neutral": 0,
+          "negative": 0,
+          "mixed": 0
+        },
+        "executiveSummary": "Kimi Antonelli is currently showing positive public sentiment across 0 matched items. No severe risk cluster dominates the current sample.",
+        "whatChanged": "Recent items are led by the newest matches, while top-ranked items emphasize the strongest matches.",
+        "themes": [],
+        "risks": [
+          "No concentrated crisis signal detected."
+        ],
+        "opportunities": [
+          "Use positive enterprise and workflow commentary in stakeholder updates.",
+          "Add more primary RSS feeds to improve source diversity.",
+          "Track YouTube comments if API access is enabled for richer public reaction."
+        ],
+        "recommendedActions": [
+          "Review high-relevance negative evidence before external messaging.",
+          "Add at least two independent RSS feeds for triangulation.",
+          "Create an alert for negative sentiment plus high engagement."
+        ],
+        "recommendedSources": [
+          {
+            "type": "rss",
+            "name": "Google News RSS",
+            "url": "https://news.google.com/rss/search?q=Kimi%20Antonelli",
+            "reason": "Broad recent news coverage for the monitored subject."
+          },
+          {
+            "type": "rss",
+            "name": "Bing News RSS",
+            "url": "https://www.bing.com/news/search?q=Kimi%20Antonelli&format=rss",
+            "reason": "Second news index for cross-checking sentiment drift."
+          },
+          {
+            "type": "youtube",
+            "name": "YouTube search query",
+            "url": "youtube:Kimi Antonelli review OR reaction",
+            "reason": "High-signal comments and creator reaction."
+          },
+          {
+            "type": "reddit",
+            "name": "Reddit search query",
+            "url": "reddit:Kimi Antonelli",
+            "reason": "Discussion-heavy public sentiment."
+          },
+          {
+            "type": "x",
+            "name": "X search query",
+            "url": "x:Kimi Antonelli lang:en",
+            "reason": "Fast-moving rumor and breaking narrative detection."
+          }
+        ],
+        "sourceBreakdown": [
+          {
+            "type": "rss",
+            "count": 0,
+            "sentiment": "none"
+          },
+          {
+            "type": "youtube",
+            "count": 0,
+            "sentiment": "none"
+          },
+          {
+            "type": "reddit",
+            "count": 0,
+            "sentiment": "none"
+          },
+          {
+            "type": "x",
+            "count": 0,
+            "sentiment": "none"
+          }
+        ],
+        "generatedBy": "heuristic"
+      }
+    },
+    {
+      "id": "run-vvvwuc0-mqw2o9c8",
+      "monitorId": "monitor-openai",
+      "status": "complete",
+      "startedAt": "2026-06-27T08:02:39.560Z",
+      "completedAt": "2026-06-27T08:02:39.635Z",
+      "sourceCoverage": [
+        {
+          "sourceId": "src-a5cts65-mqw2nxca",
+          "collected": 20,
+          "status": "active"
+        },
+        {
+          "sourceId": "src-jr1x0it-mqw2nstw",
+          "collected": 2,
+          "status": "planned"
+        },
+        {
+          "sourceId": "src-rss-1",
+          "collected": 18,
+          "status": "active"
+        },
+        {
+          "sourceId": "src-youtube-1",
+          "collected": 2,
+          "status": "mocked"
+        },
+        {
+          "sourceId": "src-reddit-1",
+          "collected": 2,
+          "status": "planned"
+        },
+        {
+          "sourceId": "src-x-1",
+          "collected": 1,
+          "status": "planned"
+        }
+      ],
+      "itemIds": [
+        "item-4dezmo6-mqw2o9dq",
+        "item-p8402n5-mqw2o9dq",
+        "item-eulrsuu-mqw2o9dq",
+        "item-jnvtjiz-mqw2o9dq",
+        "item-lub7mz8-mqw2o9dq",
+        "item-hxbbd0u-mqw2o9dq",
+        "item-2evgdkw-mqw2o9dq",
+        "item-tj5ise1-mqw2o9dq",
+        "item-ktl6rgv-mqw2o9dq",
+        "item-t9cm11y-mqw2o9dr",
+        "item-1yyslao-mqw2o9dr",
+        "item-tsycz8l-mqw2o9dr",
+        "item-vz2i77a-mqw2o9dr",
+        "item-kjixpof-mqw2o9ds",
+        "item-9299c5w-mqw2o9ds",
+        "item-d891gjj-mqw2o9ds",
+        "item-p8yv78g-mqw2o9ds",
+        "item-ms61xb5-mqw2o9ds",
+        "item-kzhrtw0-mqw2o9ds",
+        "item-ebwwsha-mqw2o9ds",
+        "item-vr4lcsn-mqw2o9ds",
+        "item-r5olk7q-mqw2o9ds",
+        "item-ts5w79x-mqw2o9e8",
+        "item-zjbllvs-mqw2o9e8",
+        "item-tlqg0gr-mqw2o9e8",
+        "item-m7pf1aj-mqw2o9e8",
+        "item-3wjtpl1-mqw2o9e8",
+        "item-o4b7psw-mqw2o9e8",
+        "item-oaxdj0g-mqw2o9e8",
+        "item-oytyzpj-mqw2o9e8",
+        "item-208mly6-mqw2o9e8",
+        "item-nn85a3b-mqw2o9e8",
+        "item-c5kteov-mqw2o9e8",
+        "item-u7m88e1-mqw2o9e8",
+        "item-t4cm2d6-mqw2o9e8",
+        "item-gx86sui-mqw2o9e9",
+        "item-buvey68-mqw2o9e9",
+        "item-bqwp9ys-mqw2o9e9",
+        "item-xk6ntjr-mqw2o9e9",
+        "item-8ictple-mqw2o9e9"
+      ],
+      "itemInsights": [
+        {
+          "itemId": "item-4dezmo6-mqw2o9dq",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-p8402n5-mqw2o9dq",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-eulrsuu-mqw2o9dq",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-jnvtjiz-mqw2o9dq",
+          "sentiment": "negative",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as negative; main themes are General reputation.",
+          "whyItMatters": "This item may need monitoring because negative framing can spread across sources."
+        },
+        {
+          "itemId": "item-lub7mz8-mqw2o9dq",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-hxbbd0u-mqw2o9dq",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-2evgdkw-mqw2o9dq",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-tj5ise1-mqw2o9dq",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-ktl6rgv-mqw2o9dq",
+          "sentiment": "negative",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [
+            "threat"
+          ],
+          "summary": "news.google.com reads as negative; main themes are General reputation.",
+          "whyItMatters": "This item carries reputational risk because it mentions threat."
+        },
+        {
+          "itemId": "item-t9cm11y-mqw2o9dr",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-1yyslao-mqw2o9dr",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-tsycz8l-mqw2o9dr",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-vz2i77a-mqw2o9dr",
+          "sentiment": "negative",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as negative; main themes are Race performance.",
+          "whyItMatters": "This item may need monitoring because negative framing can spread across sources."
+        },
+        {
+          "itemId": "item-kjixpof-mqw2o9ds",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-9299c5w-mqw2o9ds",
+          "sentiment": "negative",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as negative; main themes are General reputation.",
+          "whyItMatters": "This item may need monitoring because negative framing can spread across sources."
+        },
+        {
+          "itemId": "item-d891gjj-mqw2o9ds",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-p8yv78g-mqw2o9ds",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-ms61xb5-mqw2o9ds",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-kzhrtw0-mqw2o9ds",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-ebwwsha-mqw2o9ds",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-vr4lcsn-mqw2o9ds",
+          "sentiment": "mixed",
+          "relevance": 74,
+          "themes": [
+            "Product momentum"
+          ],
+          "riskFlags": [],
+          "summary": "Reddit search query reads as mixed; main themes are Product momentum.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-r5olk7q-mqw2o9ds",
+          "sentiment": "mixed",
+          "relevance": 98,
+          "themes": [
+            "Commercial pressure"
+          ],
+          "riskFlags": [],
+          "summary": "Reddit search query reads as mixed; main themes are Commercial pressure.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-ts5w79x-mqw2o9e8",
+          "sentiment": "positive",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are Race performance.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-zjbllvs-mqw2o9e8",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-tlqg0gr-mqw2o9e8",
+          "sentiment": "positive",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are General reputation.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-m7pf1aj-mqw2o9e8",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-3wjtpl1-mqw2o9e8",
+          "sentiment": "positive",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are Race performance.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-o4b7psw-mqw2o9e8",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-oaxdj0g-mqw2o9e8",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-oytyzpj-mqw2o9e8",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-208mly6-mqw2o9e8",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-nn85a3b-mqw2o9e8",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-c5kteov-mqw2o9e8",
+          "sentiment": "positive",
+          "relevance": 68,
+          "themes": [
+            "Trust and safety"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are Trust and safety.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-u7m88e1-mqw2o9e8",
+          "sentiment": "positive",
+          "relevance": 98,
+          "themes": [
+            "Product momentum",
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are Product momentum, Race performance.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-t4cm2d6-mqw2o9e8",
+          "sentiment": "neutral",
+          "relevance": 60,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-gx86sui-mqw2o9e9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-buvey68-mqw2o9e9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-bqwp9ys-mqw2o9e9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-xk6ntjr-mqw2o9e9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-8ictple-mqw2o9e9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        }
+      ],
+      "summary": {
+        "overallSentiment": "mixed",
+        "confidence": 95,
+        "distribution": {
+          "positive": 5,
+          "neutral": 29,
+          "negative": 4,
+          "mixed": 2
+        },
+        "executiveSummary": "OpenAI is currently showing mixed public sentiment across 40 matched items. Coverage breaks down as 5 positive, 4 negative, 2 mixed. Positive coverage includes OpenAI Will Initially Only Release ChatGPT 5.6 To…; OpenAI and Anthropic limit new AI models to…; Only Users Approved By U.S. Can Access OpenAI’s…. Negative coverage includes AI trade hits a wall amid report that…; ServiceNow, Salesforce and Other Software Stocks Surge as…; ChatGPT owner OpenAI may delay IPO until 2027…. The strongest themes are race performance, general reputation, product momentum. Risk language around threat should be watched closely.",
+        "whatChanged": "Recent items are led by OpenAI and Anthropic face new AI reality as…; OpenAI staggers AI model release after Trump administration…; OpenAI hasn't held pre-IPO investor meetings or set…, while top-ranked items emphasize Community compares alternatives.",
+        "themes": [
+          {
+            "name": "Race performance",
+            "count": 21,
+            "sentiment": "neutral"
+          },
+          {
+            "name": "General reputation",
+            "count": 16,
+            "sentiment": "neutral"
+          },
+          {
+            "name": "Product momentum",
+            "count": 2,
+            "sentiment": "positive"
+          },
+          {
+            "name": "Commercial pressure",
+            "count": 1,
+            "sentiment": "mixed"
+          },
+          {
+            "name": "Trust and safety",
+            "count": 1,
+            "sentiment": "positive"
+          }
+        ],
+        "risks": [
+          "Threat mentions are present in high-relevance evidence."
+        ],
+        "opportunities": [
+          "Use positive enterprise and workflow commentary in stakeholder updates.",
+          "Add more primary RSS feeds to improve source diversity.",
+          "Track YouTube comments if API access is enabled for richer public reaction."
+        ],
+        "recommendedActions": [
+          "Review high-relevance negative evidence before external messaging.",
+          "Add at least two independent RSS feeds for triangulation.",
+          "Create an alert for negative sentiment plus high engagement."
+        ],
+        "recommendedSources": [
+          {
+            "type": "rss",
+            "name": "Google News RSS",
+            "url": "https://news.google.com/rss/search?q=OpenAI",
+            "reason": "Broad recent news coverage for the monitored subject."
+          },
+          {
+            "type": "rss",
+            "name": "Bing News RSS",
+            "url": "https://www.bing.com/news/search?q=OpenAI&format=rss",
+            "reason": "Second news index for cross-checking sentiment drift."
+          },
+          {
+            "type": "youtube",
+            "name": "YouTube search query",
+            "url": "youtube:OpenAI review OR reaction",
+            "reason": "High-signal comments and creator reaction."
+          },
+          {
+            "type": "reddit",
+            "name": "Reddit search query",
+            "url": "reddit:OpenAI",
+            "reason": "Discussion-heavy public sentiment."
+          },
+          {
+            "type": "x",
+            "name": "X search query",
+            "url": "x:OpenAI lang:en",
+            "reason": "Fast-moving rumor and breaking narrative detection."
+          }
+        ],
+        "sourceBreakdown": [
+          {
+            "type": "rss",
+            "count": 38,
+            "sentiment": "neutral"
+          },
+          {
+            "type": "youtube",
+            "count": 0,
+            "sentiment": "none"
+          },
+          {
+            "type": "reddit",
+            "count": 2,
+            "sentiment": "mixed"
+          },
+          {
+            "type": "x",
+            "count": 0,
+            "sentiment": "none"
+          }
+        ],
+        "generatedBy": "heuristic"
+      }
+    },
+    {
+      "id": "run-jzq83t0-mqw2o6ga",
+      "monitorId": "monitor-openai",
+      "status": "complete",
+      "startedAt": "2026-06-27T08:02:35.818Z",
+      "completedAt": "2026-06-27T08:02:36.439Z",
+      "sourceCoverage": [
+        {
+          "sourceId": "src-a5cts65-mqw2nxca",
+          "collected": 20,
+          "status": "active"
+        },
+        {
+          "sourceId": "src-jr1x0it-mqw2nstw",
+          "collected": 2,
+          "status": "planned"
+        },
+        {
+          "sourceId": "src-rss-1",
+          "collected": 18,
+          "status": "active"
+        },
+        {
+          "sourceId": "src-youtube-1",
+          "collected": 2,
+          "status": "mocked"
+        },
+        {
+          "sourceId": "src-reddit-1",
+          "collected": 2,
+          "status": "planned"
+        },
+        {
+          "sourceId": "src-x-1",
+          "collected": 1,
+          "status": "planned"
+        }
+      ],
+      "itemIds": [
+        "item-5lo962l-mqw2o6k8",
+        "item-bx0x478-mqw2o6k8",
+        "item-qrz6msn-mqw2o6k8",
+        "item-0iy9onn-mqw2o6k9",
+        "item-eo2mgry-mqw2o6k9",
+        "item-n1b5zdf-mqw2o6k9",
+        "item-pf2w3ji-mqw2o6k9",
+        "item-jr5b84v-mqw2o6k9",
+        "item-pyu4z7l-mqw2o6k9",
+        "item-qjj0fg6-mqw2o6k9",
+        "item-mtfk1gn-mqw2o6k9",
+        "item-b0mm0x5-mqw2o6ka",
+        "item-gbqnfoc-mqw2o6ka",
+        "item-w8lini4-mqw2o6ka",
+        "item-rf3u5am-mqw2o6ka",
+        "item-k7be2j6-mqw2o6ka",
+        "item-5zmsa03-mqw2o6kb",
+        "item-278u62l-mqw2o6kb",
+        "item-yykins4-mqw2o6kb",
+        "item-6y70o6y-mqw2o6kb",
+        "item-orfxjil-mqw2o6kb",
+        "item-p2fncrc-mqw2o6kb",
+        "item-thtro1u-mqw2o6xf",
+        "item-hrz7aos-mqw2o6xg",
+        "item-tpbjjxw-mqw2o6xg",
+        "item-crvjalf-mqw2o6xg",
+        "item-3ixrnci-mqw2o6xg",
+        "item-mucxrs4-mqw2o6xg",
+        "item-c1o8p68-mqw2o6xg",
+        "item-vuy04yy-mqw2o6xg",
+        "item-09d8u3v-mqw2o6xg",
+        "item-f0n5zbz-mqw2o6xg",
+        "item-1z54o4b-mqw2o6xg",
+        "item-i2c16v5-mqw2o6xg",
+        "item-dvt2kfw-mqw2o6xg",
+        "item-8u7vbk6-mqw2o6xg",
+        "item-gywh79i-mqw2o6xg",
+        "item-dzi57qp-mqw2o6xg",
+        "item-3owc9g9-mqw2o6xh",
+        "item-9trq5vt-mqw2o6xh"
+      ],
+      "itemInsights": [
+        {
+          "itemId": "item-5lo962l-mqw2o6k8",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-bx0x478-mqw2o6k8",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-qrz6msn-mqw2o6k8",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-0iy9onn-mqw2o6k9",
+          "sentiment": "negative",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as negative; main themes are General reputation.",
+          "whyItMatters": "This item may need monitoring because negative framing can spread across sources."
+        },
+        {
+          "itemId": "item-eo2mgry-mqw2o6k9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-n1b5zdf-mqw2o6k9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-pf2w3ji-mqw2o6k9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-jr5b84v-mqw2o6k9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-pyu4z7l-mqw2o6k9",
+          "sentiment": "negative",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [
+            "threat"
+          ],
+          "summary": "news.google.com reads as negative; main themes are General reputation.",
+          "whyItMatters": "This item carries reputational risk because it mentions threat."
+        },
+        {
+          "itemId": "item-qjj0fg6-mqw2o6k9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-mtfk1gn-mqw2o6k9",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-b0mm0x5-mqw2o6ka",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-gbqnfoc-mqw2o6ka",
+          "sentiment": "negative",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as negative; main themes are Race performance.",
+          "whyItMatters": "This item may need monitoring because negative framing can spread across sources."
+        },
+        {
+          "itemId": "item-w8lini4-mqw2o6ka",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-rf3u5am-mqw2o6ka",
+          "sentiment": "negative",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as negative; main themes are General reputation.",
+          "whyItMatters": "This item may need monitoring because negative framing can spread across sources."
+        },
+        {
+          "itemId": "item-k7be2j6-mqw2o6ka",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-5zmsa03-mqw2o6kb",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-278u62l-mqw2o6kb",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-yykins4-mqw2o6kb",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-6y70o6y-mqw2o6kb",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-orfxjil-mqw2o6kb",
+          "sentiment": "mixed",
+          "relevance": 74,
+          "themes": [
+            "Product momentum"
+          ],
+          "riskFlags": [],
+          "summary": "Reddit search query reads as mixed; main themes are Product momentum.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-p2fncrc-mqw2o6kb",
+          "sentiment": "mixed",
+          "relevance": 98,
+          "themes": [
+            "Commercial pressure"
+          ],
+          "riskFlags": [],
+          "summary": "Reddit search query reads as mixed; main themes are Commercial pressure.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-thtro1u-mqw2o6xf",
+          "sentiment": "positive",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are Race performance.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-hrz7aos-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-tpbjjxw-mqw2o6xg",
+          "sentiment": "positive",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are General reputation.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-crvjalf-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-3ixrnci-mqw2o6xg",
+          "sentiment": "positive",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are Race performance.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-mucxrs4-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-c1o8p68-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-vuy04yy-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 98,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-09d8u3v-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-f0n5zbz-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-1z54o4b-mqw2o6xg",
+          "sentiment": "positive",
+          "relevance": 68,
+          "themes": [
+            "Trust and safety"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are Trust and safety.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-i2c16v5-mqw2o6xg",
+          "sentiment": "positive",
+          "relevance": 98,
+          "themes": [
+            "Product momentum",
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as positive; main themes are Product momentum, Race performance.",
+          "whyItMatters": "This item can reinforce positive positioning and source credibility."
+        },
+        {
+          "itemId": "item-dvt2kfw-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 60,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-8u7vbk6-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-gywh79i-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-dzi57qp-mqw2o6xg",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-3owc9g9-mqw2o6xh",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "Race performance"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are Race performance.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        },
+        {
+          "itemId": "item-9trq5vt-mqw2o6xh",
+          "sentiment": "neutral",
+          "relevance": 68,
+          "themes": [
+            "General reputation"
+          ],
+          "riskFlags": [],
+          "summary": "news.google.com reads as neutral; main themes are General reputation.",
+          "whyItMatters": "This item adds context and helps calibrate the overall public narrative."
+        }
+      ],
+      "summary": {
+        "overallSentiment": "mixed",
+        "confidence": 95,
+        "distribution": {
+          "positive": 5,
+          "neutral": 29,
+          "negative": 4,
+          "mixed": 2
+        },
+        "executiveSummary": "OpenAI is currently showing mixed public sentiment across 40 matched items. Coverage breaks down as 5 positive, 4 negative, 2 mixed. Positive coverage includes OpenAI Will Initially Only Release ChatGPT 5.6 To…; OpenAI and Anthropic limit new AI models to…; Only Users Approved By U.S. Can Access OpenAI’s…. Negative coverage includes AI trade hits a wall amid report that…; ServiceNow, Salesforce and Other Software Stocks Surge as…; ChatGPT owner OpenAI may delay IPO until 2027…. The strongest themes are race performance, general reputation, product momentum. Risk language around threat should be watched closely.",
+        "whatChanged": "Recent items are led by OpenAI and Anthropic face new AI reality as…; OpenAI staggers AI model release after Trump administration…; OpenAI hasn't held pre-IPO investor meetings or set…, while top-ranked items emphasize Community compares alternatives.",
+        "themes": [
+          {
+            "name": "Race performance",
+            "count": 21,
+            "sentiment": "neutral"
+          },
+          {
+            "name": "General reputation",
+            "count": 16,
+            "sentiment": "neutral"
+          },
+          {
+            "name": "Product momentum",
+            "count": 2,
+            "sentiment": "positive"
+          },
+          {
+            "name": "Commercial pressure",
+            "count": 1,
+            "sentiment": "mixed"
+          },
+          {
+            "name": "Trust and safety",
+            "count": 1,
+            "sentiment": "positive"
+          }
+        ],
+        "risks": [
+          "Threat mentions are present in high-relevance evidence."
+        ],
+        "opportunities": [
+          "Use positive enterprise and workflow commentary in stakeholder updates.",
+          "Add more primary RSS feeds to improve source diversity.",
+          "Track YouTube comments if API access is enabled for richer public reaction."
+        ],
+        "recommendedActions": [
+          "Review high-relevance negative evidence before external messaging.",
+          "Add at least two independent RSS feeds for triangulation.",
+          "Create an alert for negative sentiment plus high engagement."
+        ],
+        "recommendedSources": [
+          {
+            "type": "rss",
+            "name": "Google News RSS",
+            "url": "https://news.google.com/rss/search?q=OpenAI",
+            "reason": "Broad recent news coverage for the monitored subject."
+          },
+          {
+            "type": "rss",
+            "name": "Bing News RSS",
+            "url": "https://www.bing.com/news/search?q=OpenAI&format=rss",
+            "reason": "Second news index for cross-checking sentiment drift."
+          },
+          {
+            "type": "youtube",
+            "name": "YouTube search query",
+            "url": "youtube:OpenAI review OR reaction",
+            "reason": "High-signal comments and creator reaction."
+          },
+          {
+            "type": "reddit",
+            "name": "Reddit search query",
+            "url": "reddit:OpenAI",
+            "reason": "Discussion-heavy public sentiment."
+          },
+          {
+            "type": "x",
+            "name": "X search query",
+            "url": "x:OpenAI lang:en",
+            "reason": "Fast-moving rumor and breaking narrative detection."
+          }
+        ],
+        "sourceBreakdown": [
+          {
+            "type": "rss",
+            "count": 38,
+            "sentiment": "neutral"
+          },
+          {
+            "type": "youtube",
+            "count": 0,
+            "sentiment": "none"
+          },
+          {
+            "type": "reddit",
+            "count": 2,
+            "sentiment": "mixed"
+          },
+          {
+            "type": "x",
+            "count": 0,
+            "sentiment": "none"
+          }
+        ],
+        "generatedBy": "heuristic"
+      }
+    },
     {
       "id": "run-kael6ld-mqw154bn",
       "monitorId": "monitor-openai",

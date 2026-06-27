@@ -766,7 +766,20 @@ async function runScan() {
 }
 
 async function loadRecommendations() {
-  const data = await api("/api/recommendations", { method: "POST", body: { subject: state.payload.monitor.subject } });
+  const monitor = state.payload.monitor;
+  const data = await api("/api/recommendations", {
+    method: "POST",
+    body: {
+      subject: monitor.subject,
+      subjectType: monitor.subjectType,
+      description: monitor.description,
+      keywords: monitor.keywords,
+      aliases: monitor.aliases,
+      intent: monitor.intent,
+      region: monitor.region,
+      existingSources: state.payload.sources
+    }
+  });
   state.recommendations = data.recommendations;
   state.route = "sources";
   toast("AI source recommendations ready.");

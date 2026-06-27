@@ -474,7 +474,7 @@ function summarizeRun(items, insights, subject) {
       "Add at least two independent RSS feeds for triangulation.",
       "Create an alert for negative sentiment plus high engagement."
     ],
-    recommendedSources: recommendSources(subject),
+    recommendedSources: buildRecommendationFallback({ subject }),
     sourceBreakdown,
     generatedBy: "heuristic"
   };
@@ -618,15 +618,164 @@ function dominantSentiment(insights) {
   return Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
 }
 
-function recommendSources(subject) {
-  const q = encodeURIComponent(subject);
-  return [
-    { type: "rss", name: "Google News RSS", url: `https://news.google.com/rss/search?q=${q}`, reason: "Broad recent news coverage for the monitored subject." },
-    { type: "rss", name: "Bing News RSS", url: `https://www.bing.com/news/search?q=${q}&format=rss`, reason: "Second news index for cross-checking sentiment drift." },
-    { type: "youtube", name: "YouTube search query", url: `youtube:${subject} review OR reaction`, reason: "High-signal comments and creator reaction." },
-    { type: "reddit", name: "Reddit search query", url: `reddit:${subject}`, reason: "Discussion-heavy public sentiment." },
-    { type: "x", name: "X search query", url: `x:${subject} lang:en`, reason: "Fast-moving rumor and breaking narrative detection." }
-  ];
+function compactWords(value = "") {
+  return String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function uniqueStrings(values = []) {
+  return [...new Set(values.map((value) => String(value || "").trim()).filter(Boolean))];
+}
+
+function buildFallbackQueryPhrases(context) {
+  const subject = compactWords(context.subject || "subject");
+  const keywords = uniqueStrings([...(context.keywords || []), ...(context.aliases || [])].map(compactWords)).slice(0, 4);
+  const description = compactWords(context.description || "");
+  const extraSignals = uniqueStrings([
+    context.intent === "Crisis monitoring" ? `${subject} outage` : "",
+    context.intent === "Crisis monitoring" ? `${subject} lawsuit` : "",
+    context.intent === "Brand reputation" ? `${subject} review` : "",
+    context.intent === "Product launch" ? `${subject} launch` : "",
+    context.intent === "Executive/person reputation" ? `${subject} interview` : "",
+    description.includes("enterprise") ? `${subject} enterprise` : "",
+    description.includes("pricing") ? `${subject} pricing` : "",
+    description.includes("safety") ? `${subject} safety` : "",
+    description.includes("privacy") ? `${subject} privacy` : ""
+  ]);
+
+  return uniqueStrings([
+    subject,
+    subject && keywords[0] ? `${subject} ${keywords[0]}` : "",
+    ...keywords.map((keyword) => `${subject} ${keyword}`),
+    ...extraSignals
+  ]).slice(0, 6);
+}
+
+function buildRecommendationFallback(context) {
+  const phrases = buildFallbackQueryPhrases(context);
+  const subject = context.subject || "Monitor";
+  const recs = [];
+  phrases.slice(0, 4).forEach((phrase, index) => {
+    const query = encodeURIComponent(phrase);
+    recs.push({
+      type: "rss",
+      name: `${subject} RSS search: ${phrase}`,
+      url: `https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`,
+      reason: index === 0
+        ? "Primary search feed tuned to the monitor description."
+        : "Topic-specific RSS feed derived from the monitor context."
+    });
+  });
+  recs.push({ type: "youtube", name: "YouTube search query", url: `youtube:${subject} review OR reaction`, reason: "High-signal comments and creator reaction." });
+  return recs;
+}
+
+async function recommendSourcesWithOpenAI(context) {
+  const payload = {
+    subject: context.subject,
+    subjectType: context.subjectType,
+    description: context.description,
+    keywords: context.keywords,
+    aliases: context.aliases,
+    intent: context.intent,
+    region: context.region
+  };
+  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      authorization: `Bearer ${liveApiKey()}`
+    },
+    body: JSON.stringify({
+      model: OPENAI_MODEL,
+      temperature: 0.2,
+      response_format: { type: "json_object" },
+      messages: [
+        {
+          role: "system",
+          content: "You generate source-discovery plans for OSINT monitors. Return only JSON with keys: rssQueries, youtubeQueries. Each rssQueries item should have query and reason. Prefer concrete, topic-specific search phrases grounded in the monitor description. Avoid repeating the subject name alone. Do not include markdown."
+        },
+        {
+          role: "user",
+          content: `Create a source discovery plan from this monitor context:\n${JSON.stringify(payload)}\n\nRules:\n- rssQueries should contain 4 to 6 query phrases suitable for Google News RSS searches.\n- Focus on the monitor's actual description, keywords, aliases, intent, and region.\n- Include official, market, risk, product, and competitor angles when appropriate.\n- youtubeQueries should be concise search phrases.\n- Return only JSON.`
+        }
+      ]
+    })
+  });
+
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(`OpenAI recommendation request failed (${response.status}): ${body.slice(0, 240)}`);
+  }
+  const data = await response.json();
+  const content = data?.choices?.[0]?.message?.content;
+  if (!content) throw new Error("OpenAI returned an empty recommendation plan");
+  const parsed = JSON.parse(content);
+  return parsed;
+}
+
+function normalizeRecommendationUrls(entries, context) {
+  const seen = new Set((context.existingSources || []).map((source) => String(source.url || "").trim().toLowerCase()).filter(Boolean));
+  const recs = [];
+  for (const entry of entries) {
+    const url = String(entry.url || "").trim();
+    if (!url) continue;
+    const key = url.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    recs.push({
+      type: entry.type,
+      name: entry.name,
+      url,
+      reason: entry.reason
+    });
+  }
+  return recs;
+}
+
+async function recommendSources(context = {}) {
+  const cleanContext = {
+    subject: context.subject || "Monitor",
+    subjectType: context.subjectType || "company",
+    description: context.description || "",
+    keywords: Array.isArray(context.keywords) ? context.keywords : [],
+    aliases: Array.isArray(context.aliases) ? context.aliases : [],
+    intent: context.intent || "Brand reputation",
+    region: context.region || "Global",
+    existingSources: Array.isArray(context.existingSources) ? context.existingSources : []
+  };
+
+  let plan = null;
+  if (liveApiKey()) {
+    try {
+      plan = await recommendSourcesWithOpenAI(cleanContext);
+    } catch {
+      plan = null;
+    }
+  }
+
+  const rssQueries = Array.isArray(plan?.rssQueries) && plan.rssQueries.length
+    ? plan.rssQueries.slice(0, 6).map((entry) => ({
+        type: "rss",
+        name: `${cleanContext.subject} RSS search: ${entry.query || entry.topic || cleanContext.subject}`,
+        url: `https://news.google.com/rss/search?q=${encodeURIComponent(entry.query || entry.topic || cleanContext.subject)}&hl=en-US&gl=US&ceid=US:en`,
+        reason: entry.reason || "Topic-specific RSS feed generated from the monitor context."
+      }))
+    : buildRecommendationFallback(cleanContext).filter((entry) => entry.type === "rss");
+
+  const otherPlan = Array.isArray(plan?.youtubeQueries) && plan.youtubeQueries.length
+    ? plan.youtubeQueries.slice(0, 2).map((entry) => ({
+        type: "youtube",
+        name: "YouTube search query",
+        url: `youtube:${entry.query || cleanContext.subject}`,
+        reason: entry.reason || "High-signal comments and creator reaction."
+      }))
+    : buildRecommendationFallback(cleanContext).filter((entry) => entry.type !== "rss");
+
+  return normalizeRecommendationUrls([...rssQueries, ...otherPlan], cleanContext);
 }
 
 async function runScan(store, monitorId) {
@@ -805,7 +954,17 @@ async function handleApi(req, res, url) {
   }
   if (req.method === "POST" && url.pathname === "/api/recommendations") {
     const body = await readJson(req);
-    return json(res, 200, { recommendations: recommendSources(body.subject || "OpenAI") });
+    const recommendations = await recommendSources({
+      subject: body.subject || "OpenAI",
+      subjectType: body.subjectType,
+      description: body.description,
+      keywords: body.keywords,
+      aliases: body.aliases,
+      intent: body.intent,
+      region: body.region,
+      existingSources: body.existingSources
+    });
+    return json(res, 200, { recommendations });
   }
   if (req.method === "POST" && url.pathname === "/api/scans") {
     const body = await readJson(req);
