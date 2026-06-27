@@ -1,0 +1,10 @@
+
+.env
+.env.*
+!.env.example
+.vercel/
+
+node_modules/
+.DS_Store
+*.log
+work/stitch-assets
